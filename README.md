@@ -1,2 +1,3 @@
 # curso-django
-Curso de Django Aprencico no Python.pro.br
+
+Curso de Django Aprendido no Python.pro.br
