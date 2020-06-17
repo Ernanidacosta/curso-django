@@ -9,10 +9,12 @@ pytest = "*"
 coverage = "*"
 pytest-cov = "*"
 pytest-mock = "*"
+pytest-django = "*"
 
 [packages]
 django = "*"
 gunicorn = "*"
+pytest-django = "*"
 
 [requires]
 python_version = "3.8"
