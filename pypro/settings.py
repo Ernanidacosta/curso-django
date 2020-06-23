@@ -25,7 +25,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast = bool)
 
-ALLOWED_HOSTS = ['pythonprodjangoernani.herokuapp.com', '*']
+ALLOWED_HOSTS = ['django.ernani.dev', 'pythonprodjangoernani.herokuapp.com',]
 
 
 # Application definition
