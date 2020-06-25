@@ -129,5 +129,5 @@ dmypy.json
 .pyre/
 
 # Media & static files
-staticfiles/
-mediafiles/
+*staticfiles/*
+*mediafiles/*
