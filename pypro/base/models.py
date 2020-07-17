@@ -6,6 +6,7 @@ from django.db import models
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 
+
 class AbstractUser(AbstractBaseUser, PermissionsMixin):
     """
     App base user class.
@@ -31,7 +32,7 @@ class AbstractUser(AbstractBaseUser, PermissionsMixin):
     )
     date_joined = models.DateTimeField(_('date joined'), default=timezone.now)
 
-    #objects = UserManager()
+    # objects = UserManager()
 
     EMAIL_FIELD = 'email'
     USERNAME_FIELD = 'email'
@@ -49,7 +50,7 @@ class AbstractUser(AbstractBaseUser, PermissionsMixin):
         """
         Return the first_name plus the last_name, with a space in between.
         """
-        full_name = '%s' % (self.first_name)
+        full_name = '%s' % self.first_name
         return full_name.strip()
 
     def get_short_name(self):
