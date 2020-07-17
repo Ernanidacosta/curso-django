@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'pypro.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-default_db_url = 'sqlite:///'+os.path.join(BASE_DIR, 'db.sqlite3')
+default_db_url = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 
 parse_database = partial(dj_database_url.parse, conn_max_age=600)
 
@@ -131,10 +131,10 @@ COLLECTFAST_ENABLED = False
 
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 
-STATICFILES_STORAGE = “storages.backends.s3boto3.S3Boto3Storage”
-COLLECTFAST_STRATEGY = “collectfast.strategies.boto3.Boto3Strategy”
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+COLLECTFAST_STRATEGY = 'collectfast.strategies.boto3.Boto3Strategy'
 
-#Storage config in S3 AWS
+# Storage config in S3 AWS
 
 if AWS_ACCESS_KEY_ID:
     AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
@@ -146,10 +146,11 @@ if AWS_ACCESS_KEY_ID:
     AWS_S3_CUSTOM_DOMAIN = None
 
     COLLECTFAST_ENABLED = True
+    COLLECTFAST_STRATEGY = 'collectfast.strategies.boto3.Boto3Strategy'
 
     AWS_DEFAULT_ACL = 'private'
 
-     # static assets
+    # static assets
     STATICFILES_STORAGE = 's3_folder_storage.s3.StaticStorage'
     STATIC_S3_PATH = 'static'
     STATIC_ROOT = f'/{STATIC_S3_PATH}/'
