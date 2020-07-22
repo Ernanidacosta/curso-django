@@ -20,14 +20,18 @@ from django.views.decorators.debug import sensitive_post_parameters
 
 from pypro.base.models import User
 
+
 def show_toolbar(request):
     return True
+
+
 DEBUG_TOOLBAR_CONFIG = {
-    "SHOW_TOOLBAR_CALLBACK" : show_toolbar,
+    "SHOW_TOOLBAR_CALLBACK": show_toolbar,
 }
 
 csrf_protect_m = method_decorator(csrf_protect)
 sensitive_post_parameters_m = method_decorator(sensitive_post_parameters())
+
 
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
@@ -72,12 +76,12 @@ class UserAdmin(admin.ModelAdmin):
 
     def get_urls(self):
         return [
-            path(
-                '<id>/password/',
-                self.admin_site.admin_view(self.user_change_password),
-                name='auth_user_password_change',
-            ),
-        ] + super().get_urls()
+                   path(
+                       '<id>/password/',
+                       self.admin_site.admin_view(self.user_change_password),
+                       name='auth_user_password_change',
+                   ),
+               ] + super().get_urls()
 
     def lookup_allowed(self, lookup, value):
         # Don't allow lookups involving passwords.
