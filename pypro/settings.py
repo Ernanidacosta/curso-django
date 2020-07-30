@@ -159,7 +159,7 @@ if AWS_ACCESS_KEY_ID:
 
     COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
     COLLECTFAST_ENABLED = True
-    AWS_DEFAULT_ACL = 'private'
+    AWS_DEFAULT_ACL = None
 
     # static assets
     STATICFILES_STORAGE = 's3_folder_storage.s3.StaticStorage'
