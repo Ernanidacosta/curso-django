@@ -33,6 +33,8 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 AUTH_USER_MODEL = 'base.User'
 
+COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -76,7 +78,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'pypro.wsgi.application'
 
-#Config Django Debug Toolbar
+# Config Django Debug Toolbar
 
 INTERNAL_IPS=config('INTERNAL_IPS', cast=Csv(), default='127.0.0.1')
 
@@ -141,8 +143,8 @@ COLLECTFAST_ENABLED = False
 
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-COLLECTFAST_STRATEGY = 'collectfast.strategies.boto3.Boto3Strategy'
+#STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+#COLLECTFAST_STRATEGY = 'collectfast.strategies.boto3.Boto3Strategy'
 
 # Storage config in S3 AWS
 
@@ -155,9 +157,8 @@ if AWS_ACCESS_KEY_ID:
     AWS_QUERYSTRING_AUTH = True
     AWS_S3_CUSTOM_DOMAIN = None
 
-    COLLECTFAST_STRATEGY = 'collectfast.strategies.boto3.Boto3Strategy'
+    COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
     COLLECTFAST_ENABLED = True
-
     AWS_DEFAULT_ACL = 'private'
 
     # static assets
@@ -179,4 +180,4 @@ if AWS_ACCESS_KEY_ID:
 SENTRY_DSN = config('SENTRY_DSN', default=None)
 
 if SENTRY_DSN:
-    sentry_sdk.init(dsn=SENTRY_DSN, integrations=[DjangoIntegration()])
+    sentry_sdk.init(dsn=SENTRY_DSN, integrations=[DjangoIntegration()], send_default_pii=True)
