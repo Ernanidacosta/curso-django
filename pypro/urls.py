@@ -16,11 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.conf import settings
 from django.urls import path, include
-from pypro.base.views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home', home, name='home'),
+    path('', include('pypro.base.urls')),
 ]
 
 if settings.DEBUG:
