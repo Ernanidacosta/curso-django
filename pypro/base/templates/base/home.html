@@ -1,1 +1,71 @@
 {% extends 'base/base.html' %}
+{% load static %}
+{% block title %}Python Pro - Home{% endblock title %}
+
+{% block body %}
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="jumbotron">
+				<h2>
+					Curso de Python com Luciano Ramalho
+				</h2>
+				<h4 class="mt-4">Matriculas abertas, Investimento: R$1000</h4>
+				<!-- INICIO DO BOTAO PAGSEGURO -->
+				<a href="https://pag.ae/7WhnFuwCN/button" target="_blank" title="Pagar com PagSeguro"><img
+						src="//assets.pagseguro.com.br/ps-integration-assets/botoes/pagamentos/205x30-pagar-preto.gif"
+						alt="Pague com PagSeguro - é rápido, grátis e seguro!" /></a>
+				<!-- FIM DO BOTAO PAGSEGURO -->
+				<!--					<h4 class="mt-4">Entre na fila de espera</h4>-->
+				<!--					<form-->
+				<!--						action="https://herokuapp.us17.list-manage.com/subscribe/post?u=dea54f6c7f1266aa97248082c&amp;id=bc5c0807f4"-->
+				<!--						method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"-->
+				<!--						class="form-row align-items-center" target="_blank" novalidate>-->
+				<!--						<div class="form-row align-items-center">-->
+				<!--							<div class="col-auto">-->
+				<!--								<label class="sr-only" for="mce-EMAIL">Email</label>-->
+				<!--								<input type="email" value="" name="EMAIL" class="form-control required" id="mce-EMAIL"-->
+				<!--									placeholder="exemplo@email.com">-->
+				<!--							</div>-->
+				<!--							<div class="col-auto">-->
+				<!--								<label class="sr-only" for="mce-FNAME">Nome</label>-->
+				<!--								<input type="text" value="" name="FNAME" class="form-control" id="mce-FNAME"-->
+				<!--									placeholder="Seu Nome Aqui">-->
+				<!--							</div>-->
+				<!--							&lt;!&ndash; real people should not fill this in and expect good things - do not remove this or risk form bot signups&ndash;&gt;-->
+				<!--							<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"-->
+				<!--									name="b_dea54f6c7f1266aa97248082c_bc5c0807f4" tabindex="-1" value=""></div>-->
+				<!--						</div>-->
+				<!--						<div class="col-auto">-->
+				<!--							<input type="submit" value="Salvar" name="subscribe" id="mc-embedded-subscribe"-->
+				<!--								class="btn btn-primary">-->
+				<!--						</div>-->
+				<!--				</div>-->
+				<!--				</form>-->
+			</div>
+			<div class="card">
+				<h5 class="card-header">
+					Sobre o Instrutor.
+				</h5>
+				<div class="card-body">
+					<p class="card-text">
+						<img src="{% static 'img/luciano.ramalho.jpg' %}" alt="Foto Luciano Ramalho"
+							class="img-thumbnail float-left mr-3" />
+						Luciano Ramalho é programador Python desde 1998, Fellow da Python Software Foundation; é
+						autor
+						do livro
+						<a href="https://novatec.com.br/livros/pythonfluente/" target="_blank">Python Fluente</a> é
+						sócio do <a href="http://Python.pro.br" target="_blank">Python.pro.br</a> – uma empresa de
+						treinamento –
+						e cofundador do Garoa Hacker Clube, o primeiro hackerspace do Brasil.
+						Tem liderado equipes de desenvolvimento de software e ministrado cursos sobre Python em
+						empresas
+						de mídia, bancos e para o governo federal.
+
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock body %}
