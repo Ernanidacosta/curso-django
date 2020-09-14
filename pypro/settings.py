@@ -16,7 +16,6 @@ from decouple import Csv, config
 import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
 
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -81,7 +80,7 @@ WSGI_APPLICATION = 'pypro.wsgi.application'
 
 # Config Django Debug Toolbar
 
-INTERNAL_IPS=config('INTERNAL_IPS', cast=Csv(), default='127.0.0.1')
+INTERNAL_IPS = config('INTERNAL_IPS', cast=Csv(), default='127.0.0.1')
 
 if DEBUG:
     INSTALLED_APPS.append('debug_toolbar')
@@ -144,8 +143,8 @@ COLLECTFAST_ENABLED = False
 
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 
-#STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-#COLLECTFAST_STRATEGY = 'collectfast.strategies.boto3.Boto3Strategy'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# COLLECTFAST_STRATEGY = 'collectfast.strategies.boto3.Boto3Strategy'
 
 # Storage config in S3 AWS
 
