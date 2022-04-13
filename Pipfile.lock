@@ -56,11 +56,10 @@
         },
         "boto3": {
             "hashes": [
-                "sha256:1a272a1dd36414b1626a47bb580425203be0b5a34caa117f38a5e18adf21f918",
-                "sha256:8129ad42cc0120d1c63daa18512d6f0b1439e385b2b6e0fe987f116bdf795546"
+                "sha256:03fe95333a51e3a14d7ab9644ae702f9feb008a4f5d308724eaa9ab8fd4c7d71",
+                "sha256:f99417fb53d0af357eb91152b30686c40dd22381499bfab0d61830eee72d5a0b"
             ],
-            "markers": "python_version >= '3.6'",
-            "version": "==1.20.54"
+            "version": "==1.21.40"
         },
         "botocore": {
             "hashes": [
