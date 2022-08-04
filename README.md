@@ -1,5 +1,3 @@
-# curso-django
-
 Aplicação disponível em https://pythonprodjangoernani.herokuapp.com/
 
 [![Build Status](https://travis-ci.com/Ernanidacosta/curso-django.svg?branch=master)](https://travis-ci.com/Ernanidacosta/curso-django)
