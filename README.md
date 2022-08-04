@@ -7,4 +7,4 @@ Aplicação disponível em https://pythonprodjangoernani.herokuapp.com/
 [![Updates](https://pyup.io/repos/github/Ernanidacosta/curso-django/shield.svg)](https://pyup.io/repos/github/Ernanidacosta/curso-django/)
 [![Python 3](https://pyup.io/repos/github/Ernanidacosta/curso-django/python-3-shield.svg)](https://pyup.io/repos/github/Ernanidacosta/curso-django/)
 
-Curso de Python e Django Aprendido no Python.pro.br
+Curso de Python e Django do DevPro
