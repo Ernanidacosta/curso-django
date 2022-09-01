@@ -34,7 +34,7 @@
         },
         "black": {
             "hashes": [],
-            "version": "==22.6.0"
+            "version": "==22.8.0"
         },
         "blue": {
             "hashes": [
@@ -401,7 +401,7 @@
         },
         "black": {
             "hashes": [],
-            "version": "==22.6.0"
+            "version": "==22.8.0"
         },
         "blue": {
             "hashes": [
